@@ -8,9 +8,9 @@ import Skills from '../components/Skills'
 export default function Home() {
   return (
     <div className='bg-slate-50 '>
-      <div className='max-w-6xl mx-auto snap-y snap-mandatory max-h-screen'>
+      <div className='max-w-6xl mx-auto '>
         <Head>
-          <title>Kalle's portfolio</title>
+          <title>Homepage</title>
         </Head>
         {/* HEADER */}
         <Header />
