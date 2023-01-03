@@ -54,7 +54,7 @@ function Projects() {
   return (
     <>
       {[funi, futu, py].map((image) => (
-        <Project id={image} />
+        <Project key={image} id={image} />
       ))}
       <motion.div className="fixed left-0 right-0 h-2 bg-black bottom-0 " style={{ scaleX }} />
     </>
