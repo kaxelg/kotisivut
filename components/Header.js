@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 function Header() {
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between z-20">
+    <header className="top-0 p-5 flex items-start justify-between z-20">
         <div className="flex flex-row items-center pt-2">
             <a className='pr-10'><Link href="#projects">Projects</Link></a>
             <a><Link href="#skills">Skills</Link></a>

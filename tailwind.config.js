@@ -7,5 +7,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@kamona/tailwindcss-perspective'),
+  ],
 }
