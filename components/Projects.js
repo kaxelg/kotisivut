@@ -1,9 +1,11 @@
 import React from 'react'
 import { useRef } from 'react'
+import {BrowserView, MobileView} from 'react-device-detect';
 import Image from 'next/image'
 import funi from "/public/Funidata.jpeg"
 import futu from "/public/Futurice.png"
 import py from "/public/Python.png"
+import fam from "/public/Fam.png"
 
 
 
@@ -18,27 +20,38 @@ function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Project({ id }) {
+function Project(props) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
+  console.log(props);
 
   return (
-    <section className='h-screen flex justify-center items-center relative snap-center'>
-      <div className='relative overflow-hidden w-3/4' ref={ref}>
-        <Image className='inset-0 w-full h-full' src={id} alt="project" />
-      </div>
-      <motion.div
-      style={{ y }} 
-      className="p-6 rounded-lg shadow-lg bg-white max-w-sm left-[calc(50%+200px)] absolute"
-      >
-        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
-        <p class="text-gray-700 text-base mb-4">
-        Some quick example text to build on the card title and make up the bulk of the cards
-        content.
-        </p>
-      </motion.div>
-    </section>
+    <>
+      <BrowserView>
+        <section className='h-screen flex justify-center items-center relative snap-center '>
+        <div className='relative overflow-hidden object-cover drag-area' ref={ref}>
+          <Image className='inset-0 w-3/4' src={props.img} alt={props.p} />
+        </div>
+        <motion.div
+        style={{ y }} 
+        className="p-6 rounded-lg shadow-lg bg-white max-w-sm left-[calc(50%+200px)] absolute cursor-grab active:cursor-grabbing"
+        drag dragConstraints={ref}
+        >
+          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{props.title}</h5>
+          <p className="text-gray-700 text-base mb-4">{props.info}</p>
+          <p className='text-gray-600 text-xs text-right'>Move me if I am in the way.</p>
+        </motion.div>
+        </section>
+      </BrowserView>
+      <MobileView>
+      <section className='h-screen flex justify-center items-center relative snap-center '>
+        <div className='relative overflow-hidden object-cover drag-area' ref={ref}>
+          <Image className='inset-0 w-full h-full' src={props.img} alt={props.p} />
+        </div>
+      </section>
+      </MobileView>
+    </>
   );
 }
 
@@ -51,10 +64,31 @@ function Projects() {
     restDelta: 0.001
   });
 
+  const proj = [{
+    id: 1,
+    p: "Sisu usability research for Funidata Oy",
+    info: "I was part of team that conducted user research of Sisu program",
+    img: funi
+  }, {
+    id: 2,
+    p: "Futurice website renewal",
+    info: "I was part of dev team who did website renewal",
+    img: futu
+  }, {
+    id: 3,
+    p: "Python program",
+    info: "I created UI and was part of group who made program that shows user greenhouse gas emissions.",
+    img: py
+  }, {
+    id: 4,
+    p: "PadelFam case study",
+    info: "I created UI and was part of group who made program that shows user greenhouse gas emissions.",
+    img: fam
+  }]
   return (
     <>
-      {[funi, futu, py].map((image) => (
-        <Project key={image} id={image} />
+      {proj.map((props) => (
+        <Project key={props.id} img={props.img} info={props.info} title={props.p} />
       ))}
       <motion.div className="fixed left-0 right-0 h-2 bg-black bottom-0 " style={{ scaleX }} />
     </>
@@ -62,27 +96,3 @@ function Projects() {
 }
 
 export default Projects
-
-{/* <div className="relative flex-column justify-center items-center pt-72">
-      <div className="relative h-screen">
-      <Image height={1000} width={1000} alt="Project" src={futu} />
-      <motion.div 
-      className="block p-6 rounded-lg shadow-lg bg-white max-w-sm absolute right-0 top-1/4 z-10"
-      >
-        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
-        <p class="text-gray-700 text-base mb-4">
-        Some quick example text to build on the card title and make up the bulk of the card's
-        content.
-        </p>
-      </motion.div>
-      </div>
-      <div className="relative h-screen">
-      <Image height={1000} width={1000} alt="Project" src={funi} />
-      <motion.h2 className="right-0 absolute">
-        Testi
-      </motion.h2>
-      </div>
-      <div className="relative h-screen">
-      <Image height={1000} width={1000} alt="Project" src={py} />
-      </div>
-    </div> */}
