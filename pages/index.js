@@ -18,7 +18,6 @@ export default function Home() {
         <section id="hero">
           <Hero />
         </section>
-
         {/* PROJECTS */}
         <section id="projects">
           <Projects />

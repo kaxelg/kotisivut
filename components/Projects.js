@@ -37,6 +37,7 @@ function Project(props) {
         style={{ y }} 
         className="p-6 rounded-lg shadow-lg bg-white max-w-sm left-[calc(50%+200px)] absolute cursor-grab active:cursor-grabbing"
         drag dragConstraints={ref}
+        dragMomentum={false}
         >
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{props.title}</h5>
           <p className="text-gray-700 text-base mb-4">{props.info}</p>
@@ -67,22 +68,22 @@ function Projects() {
   const proj = [{
     id: 1,
     p: "Sisu usability research for Funidata Oy",
-    info: "I was part of team that conducted user research of Sisu program",
+    info: "I was part of team that conducted user research of Sisu student system. We figured out key functionalities of Sisu and created tasks around them. After that we conducted several user tests and analyzed the results.",
     img: funi
   }, {
     id: 2,
-    p: "Futurice website renewal",
-    info: "I was part of dev team who did website renewal",
+    p: "Futurice.com website renewal",
+    info: "I was part of dev team who did website renewal for Futurice. Technologies used: Next.js, Typescript, CSS modules, Netlify and Contentful",
     img: futu
   }, {
     id: 3,
-    p: "Python program",
-    info: "I created UI and was part of group who made program that shows user greenhouse gas emissions.",
+    p: "Greenhouse gas monitoring program",
+    info: "I created UI and was part of group who made program that displays greenhouse gas emissions. The program fetches data from two APIs and plots the data according to users preferences. Technologies used: PyQt5 and Python",
     img: py
   }, {
     id: 4,
     p: "PadelFam case study",
-    info: "I created UI and was part of group who made program that shows user greenhouse gas emissions.",
+    info: "I made a case study of PadelFam app. The problem with the app is the court reservation system. Here is example of my thinking progress and wireframe how to improve current design.",
     img: fam
   }]
   return (

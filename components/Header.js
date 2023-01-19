@@ -6,18 +6,21 @@ function Header() {
   return (
     <header className="top-0 p-5 flex items-start justify-between z-20">
         <div className="flex flex-row items-center pt-2">
-            <a className='pr-10'><Link href="#projects">Projects</Link></a>
-            <a><Link href="#skills">Skills</Link></a>
+            <Link className='pr-10' href="#projects">Projects</Link>
+            <Link href="#skills">Skills</Link>
         </div>
         <div className="flex flex-row items-center cursor-pointer">
             {/* Social Icon */}
-            <SocialIcon 
+            <a>
+              <SocialIcon 
                 className="cursor-pointer"
                 network='email'
                 fgColor='gray'
                 bgColor='transparent'
-            />
-            <p className="uppercase hidden md:inline-flex text-sm ">Get In Touch</p>
+              />
+            </a>
+            
+            <a href='mailto:kalle.gustafsson@tuni.fi' className="uppercase hidden md:inline-flex text-sm ">Contact me</a>
         </div>
     </header>
   )
