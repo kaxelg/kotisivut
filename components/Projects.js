@@ -68,12 +68,12 @@ function Projects() {
   const proj = [{
     id: 1,
     p: "Sisu usability research for Funidata Oy",
-    info: "I was part of team that conducted user research of Sisu student system. We figured out key functionalities of Sisu and created tasks around them. After that we conducted several user tests and analyzed the results.",
+    info: "I was part of student team that conducted user research of Sisu student system. We figured out key functionalities of Sisu and created tasks around them. After that we conducted several user tests and analyzed the results.",
     img: funi
   }, {
     id: 2,
     p: "Futurice.com website renewal",
-    info: "I was part of dev team who did website renewal for Futurice. Technologies used: Next.js, Typescript, CSS modules, Netlify and Contentful",
+    info: "I was part of student dev team who did website renewal for Futurice. Technologies used: Next.js, Typescript, CSS modules, Netlify and Contentful",
     img: futu
   }, {
     id: 3,
