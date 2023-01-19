@@ -18,14 +18,15 @@ export default function Home() {
         <section id="hero">
           <Hero />
         </section>
-        {/* PROJECTS */}
-        <section id="projects">
-          <Projects />
-        </section>
         {/* SKILLS */}
         <section id="skills">
           <Skills />
         </section>
+        {/* PROJECTS */}
+        <section id="projects">
+          <Projects />
+        </section>
+        
 
         {/* CONTACTS */}
       </div>
