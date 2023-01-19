@@ -5,8 +5,8 @@ function Header() {
   return (
     <header className="top-0 p-5 flex items-start justify-between z-20">
         <div className="flex flex-row items-center pt-2">
-            <Link className='uppercase text-sm pr-10' href="#projects">Projects</Link>
             <Link className="uppercase text-sm pr-10" href="#skills">Skills</Link>
+            <Link className='uppercase text-sm pr-10' href="#projects">Projects</Link>
             <Link className="uppercase text-sm" href='mailto:kalle.gustafsson@tuni.fi'>download cv</Link>
         </div>
         <div className="flex flex-row items-center cursor-pointer">
