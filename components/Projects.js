@@ -29,8 +29,8 @@ function Project(props) {
   return (
     <>
       <BrowserView>
-        <section className='h-screen flex justify-center items-center relative snap-center '>
-        <div className='relative overflow-hidden object-cover drag-area' ref={ref}>
+        <section className='h-screen flex justify-center items-center relative snap-center static'>
+        <div className='relative object-cover drag-area' ref={ref}>
           <Image className='inset-0 w-3/4' src={props.img} alt={props.p} />
         </div>
         <motion.div
@@ -88,10 +88,11 @@ function Projects() {
   }]
   return (
     <>
+      <div className='absolute text-2xl pt-24 text-center w-screen'><h2>Here is some projects I have worked on</h2></div>
       {proj.map((props) => (
         <Project key={props.id} img={props.img} info={props.info} title={props.p} />
       ))}
-      <motion.div className="fixed left-0 right-0 h-2 bg-black bottom-0 " style={{ scaleX }} />
+      <motion.div className="sticky bottom-3 left-0 right-0 h-2 bg-slate-900" style={{ scaleX }} />
     </>
   )
 }
