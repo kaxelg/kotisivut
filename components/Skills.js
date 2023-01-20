@@ -5,7 +5,9 @@ import { IconContext } from 'react-icons'
 function Skills() {
   return (
     <>
-      <div className='h-screen snap-center flex items-center justify-center'>
+    <div className='block'>
+      <div className='pb-24 text-center text-lg'><h2>Technologies I have worked with</h2></div>
+      <div className='h-80 snap-center flex items-center justify-center'>
         <div className='grid auto-rows-auto auto-cols-max grid-cols-4 gap-y-10 gap-x-10 text-center'>
           <IconContext.Provider value={{size: 50}}>
             <div>
@@ -58,6 +60,7 @@ function Skills() {
             </div>
           </IconContext.Provider>
         </div>
+      </div>
       </div>
     </>
   )
