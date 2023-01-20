@@ -88,7 +88,7 @@ function Projects() {
   }]
   return (
     <>
-      <div className='absolute text-2xl pt-24 text-center w-screen'><h2>Here is some projects I have worked on</h2></div>
+      <div className='absolute text-2xl pt-24 left-2/4 -translate-x-2/4'><h2>Here is some projects I have worked on</h2></div>
       {proj.map((props) => (
         <Project key={props.id} img={props.img} info={props.info} title={props.p} />
       ))}
