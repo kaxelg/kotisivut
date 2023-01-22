@@ -24,7 +24,6 @@ function Project(props) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
-  console.log(props);
 
   return (
     <>
@@ -78,7 +77,7 @@ function Projects() {
   }, {
     id: 3,
     p: "Greenhouse gas monitoring program",
-    info: "I created UI and was part of group who made program that displays greenhouse gas emissions. The program fetches data from two APIs and plots the data according to users preferences. Technologies used: PyQt5 and Python",
+    info: "I designed UI and was part of group who made program that displays greenhouse gas emissions. The program fetches data from two APIs and plots the data according to users preferences. Technologies used: PyQt5 and Python",
     img: py
   }, {
     id: 4,
@@ -88,7 +87,7 @@ function Projects() {
   }]
   return (
     <>
-      <div className='absolute text-2xl pt-24 left-2/4 -translate-x-2/4'><h2>Here is some projects I have worked on</h2></div>
+      <div className='absolute text-2xl pt-24 left-2/4 -translate-x-2/4'><h2>Scroll down to see some projects I have worked on</h2></div>
       {proj.map((props) => (
         <Project key={props.id} img={props.img} info={props.info} title={props.p} />
       ))}
