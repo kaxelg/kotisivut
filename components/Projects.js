@@ -5,7 +5,7 @@ import Image from 'next/image'
 import funi from "/public/Funidata.jpeg"
 import futu from "/public/Futurice.png"
 import py from "/public/Python.png"
-import fam from "/public/Fam.png"
+
 
 
 
@@ -28,9 +28,9 @@ function Project(props) {
   return (
     <>
       <BrowserView>
-        <section className='h-screen flex justify-center items-center relative snap-center static'>
+        <section className='h-screen flex justify-center items-center snap-center static'>
         <div className='relative object-cover drag-area' ref={ref}>
-          <Image className='inset-0 w-3/4' src={props.img} alt={props.p} />
+          <Image className='inset-0 w-3/4' src={props.img} alt={props.p} priority/>
         </div>
         <motion.div
         style={{ y }} 
@@ -79,11 +79,6 @@ function Projects() {
     p: "Greenhouse gas monitoring program",
     info: "I designed UI and was part of group who made program that displays greenhouse gas emissions. The program fetches data from two APIs and plots the data according to users preferences. Technologies used: PyQt5 and Python",
     img: py
-  }, {
-    id: 4,
-    p: "PadelFam case study",
-    info: "I made a case study of PadelFam app. The problem with the app is the court reservation system. Here is example of my thinking progress and wireframe how to improve current design.",
-    img: fam
   }]
   return (
     <>
@@ -91,7 +86,6 @@ function Projects() {
       {proj.map((props) => (
         <Project key={props.id} img={props.img} info={props.info} title={props.p} />
       ))}
-      <motion.div className="sticky bottom-3 left-0 right-0 h-2 bg-slate-900" style={{ scaleX }} />
     </>
   )
 }
