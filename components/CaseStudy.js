@@ -61,50 +61,50 @@ export default function App() {
   )
 
   return (
-    <div className="h-screen snap-center flex items-center">
+    <div className="h-screen snap-center flex items-center overflow-hidden">
         <div>
             <div ref={sliderRef} className="keen-slider">
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia1} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia1} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia2} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia2} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia3} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia3} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia4} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia4} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia5} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia5} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia6} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia6} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia7} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia7} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia8} alt={"dia"} height={720} width={1280}></Image>
+                    <Image className="w-4/5" src={dia8} alt={"dia"}></Image>
                 </div>
 
             </div>
 
             <div ref={thumbnailRef} className="keen-slider thumbnail">
-            <div className="keen-slider__slide mt-10">
+                <div className="keen-slider__slide mt-10 flex justify-center">
                     <Image src={dia1} alt={"dia"}></Image>
                 </div>
-                <div className="keen-slider__slide mt-10">
+                <div className="keen-slider__slide mt-10 flex justify-center">
                     <Image src={dia2} alt={"dia"}></Image>
                 </div>
-                <div className="keen-slider__slide mt-10">
+                <div className="keen-slider__slide mt-10 flex justify-center">
                     <Image src={dia3} alt={"dia"}></Image>
                 </div>
-                <div className="keen-slider__slide mt-10">
+                <div className="keen-slider__slide mt-10 flex justify-center">
                     <Image src={dia4} alt={"dia"}></Image>
                 </div>
-                <div className="keen-slider__slide mt-10">
+                <div className="keen-slider__slide mt-10 flex justify-center">
                     <Image src={dia5} alt={"dia"}></Image>
                 </div>
                 <div className="keen-slider__slide mt-10">
