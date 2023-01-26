@@ -65,7 +65,7 @@ function Projects() {
   }, {
     id: 2,
     p: "Futurice.com website renewal",
-    info: "I was part of student dev team who did website renewal for Futurice. I worked closely with futurice UX team to learn about website design progress. Technologies used: Next.js, Typescript, CSS modules, Netlify and Contentful",
+    info: "I was part of student dev team who did website renewal for Futurice. I worked closely with Futurice UX team to learn about website design progress. Technologies used: Next.js, Typescript, CSS modules, Netlify and Contentful",
     img: futu
   }, {
     id: 3,
