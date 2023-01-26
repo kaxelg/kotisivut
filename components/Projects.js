@@ -28,9 +28,9 @@ function Project(props) {
   return (
     <>
       <BrowserView>
-        <section className='h-screen flex justify-center items-center snap-center static'>
+        <section className='h-screen flex justify-center items-center relative snap-center'>
         <div className='relative object-cover drag-area' ref={ref}>
-          <Image className='inset-0 w-3/4' src={props.img} alt={props.p} priority/>
+          <Image className='inset-0 w-3/4' src={props.img} alt={props.p} unoptimized={true}/>
         </div>
         <motion.div
         style={{ y }} 
@@ -86,6 +86,7 @@ function Projects() {
       {proj.map((props) => (
         <Project key={props.id} img={props.img} info={props.info} title={props.p} />
       ))}
+      <motion.div className="sticky bottom-3 left-0 right-0 h-2 bg-slate-900" style={{ scaleX }} />
     </>
   )
 }
