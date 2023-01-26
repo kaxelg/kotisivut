@@ -1,15 +1,17 @@
 import Head from 'next/head'
-import CaseStudy from '../components/CaseStudy'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
+import CaseStudy from '../components/CaseStudy'
 
 import { 
   motion,
   useScroll,
   useSpring,
 } from 'framer-motion'
+
+
 
 
 export default function Home() {
@@ -40,8 +42,8 @@ export default function Home() {
         <section id="projects">
           <Projects />
         </section>
-        {/* CASE STUDY */}
-        <section>
+        {/* CASE STUDY CAROUSEL */}
+        <section id='casestudy'>
           <CaseStudy />
         </section>
         <motion.div className="sticky bottom-3 left-0 right-0 h-2 bg-slate-900" style={{ scaleX }} />
