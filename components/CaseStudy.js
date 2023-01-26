@@ -63,7 +63,7 @@ export default function App() {
   return (
     <div className="h-screen snap-center flex items-center overflow-hidden">
         <div>
-            <div ref={sliderRef} className="keen-slider">
+            <div ref={sliderRef} className="keen-slider hover:cursor-grab active:cursor-grabbing">
                 <div className="keen-slider__slide flex items-center justify-center">
                     <Image className="w-4/5" src={dia1} alt={"dia"}></Image>
                 </div>
