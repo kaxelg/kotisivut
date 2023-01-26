@@ -65,28 +65,28 @@ export default function App() {
         <div>
             <div ref={sliderRef} className="keen-slider">
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia1} alt={"dia"} unoptimized={false}></Image>
+                    <Image src={dia1} alt={"dia"} height={720} width={1280}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia2} alt={"dia"} ></Image>
+                    <Image src={dia2} alt={"dia"} height={720} width={1280}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia3} alt={"dia"}></Image>
+                    <Image src={dia3} alt={"dia"} height={720} width={1280}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia4} alt={"dia"}></Image>
+                    <Image src={dia4} alt={"dia"} height={720} width={1280}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia5} alt={"dia"}></Image>
+                    <Image src={dia5} alt={"dia"} height={720} width={1280}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia6} alt={"dia"}></Image>
+                    <Image src={dia6} alt={"dia"} height={720} width={1280}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia7} alt={"dia"}></Image>
+                    <Image src={dia7} alt={"dia"} height={720} width={1280}></Image>
                 </div>
                 <div className="keen-slider__slide flex items-center justify-center">
-                    <Image src={dia8} alt={"dia"}></Image>
+                    <Image src={dia8} alt={"dia"} height={720} width={1280}></Image>
                 </div>
 
             </div>
