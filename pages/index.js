@@ -41,7 +41,7 @@ export default function Home() {
           <Projects />
         </section>
         {/* CASE STUDY */}
-        <section id='casestudy'>
+        <section>
           <CaseStudy />
         </section>
         <motion.div className="sticky bottom-3 left-0 right-0 h-2 bg-slate-900" style={{ scaleX }} />
